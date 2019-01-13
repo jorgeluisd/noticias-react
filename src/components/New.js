@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const New = props => {
     const {urlToImage, url, title, description, source} = props.new
@@ -23,5 +24,15 @@ const New = props => {
         </div>
     );
 };
+
+New.propTypes = {
+    new: PropTypes.shape({
+        urlToImage: PropTypes.string,
+        url: PropTypes.string,
+        title: PropTypes.string,
+        description: PropTypes.string,
+        source: PropTypes.object
+    })
+}
 
 export default New;

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 class NewForm extends Component {
     
@@ -33,6 +34,10 @@ class NewForm extends Component {
             </div>
         );
     }
+}
+
+NewForm.propTypes = {
+    getNews: PropTypes.func.isRequired
 }
  
 export default NewForm;
